@@ -1,9 +1,9 @@
-FROM alpine:3.4
+FROM alpine:3.8
 
-MAINTAINER Marvin Weck <marvin.weck@bittrade.eu>
+MAINTAINER BaseBoxOrg
 
 ARG STEEM_TAG_NAME
-ENV STEEM_TAG_NAME ${STEEM_TAG_NAME:-0.18.2}
+ENV STEEM_TAG_NAME ${STEEM_TAG_NAME:-0.19.12}
 ENV STEEMD_ARGS --p2p-endpoint=0.0.0.0:2001 --rpc-endpoint=0.0.0.0:8090 --replay-blockchain
 
 RUN apk --no-cache add \
